@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="/dist/index.css">
+    <title>Calendar</title>
+</head>
+<body>
+<main>
+    <section class="actions">
+        <div class="wrapper actions__wrap">
+            <div class="action-buttons">
+                <button class="action-buttons__add">Добавить</button>
+                <button class="action-buttons__refresh">Обновить</button>
+            </div>
+
+            <div class="action-search">
+                <button class="action-search__find"></button>
+                <input type="search" class="action-search__field" placeholder="Событие, дата или учасник">
+            </div>
+        </div>
+    </section>
+    <section class="main-calendar">
+        <div class="wrapper">
+            <div class="switch">
+                <button class="switch__prev-btn"></button>
+                <p class="switch__info"></p>
+                <button class="switch__next-btn"></button>
+                <button class="switch__today-btn">Сегодня</button>
+            </div>
+            <div class="calendar">
+            </div>
+        </div>
+    </section>
+    <section class="tooltip hidden">
+        <span class="tooltip__close"></span>
+        <div class="tooltip-fields">
+            <input type="hidden" class="tooltip-fields__date" placeholder="2020/4/22 (Текущего месяца)">
+            <input type="text" class="tooltip-fields__name" placeholder="Название">
+            <input type="text" class="tooltip-fields__members" placeholder="Учасники">
+            <textarea rows="4" class="tooltip-fields__desc" placeholder="Описание"></textarea>
+        </div>
+        <div class="tooltip-actions">
+            <button class="tooltip-actions__save">Сохранить</button>
+            <button class="tooltip-actions__cancel">Отмена</button>
+        </div>
+    </section>
+</main>
+<script src="/dist/index.bundle.js"></script>
+</body>
+</html>

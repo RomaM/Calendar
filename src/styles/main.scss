@@ -1,0 +1,132 @@
+@import "normalize.css";
+@import "utils/vars";
+@import "utils/calendar";
+@import "utils/tooltip";
+
+/*Main Styles*/
+body {
+  font-family: $mainFont;
+  font-size: $mainFontSize;
+  line-height: $mainLineHeight;
+  background: $defaultColor;
+  color: $darkColor;
+}
+
+::placeholder {
+  font-size: .95rem;
+  color: $grayColor;
+}
+
+.wrapper {
+  max-width: 1200px;
+  padding: 0 $gap;
+  margin: auto;
+}
+
+.actions {
+  background: $primaryColor;
+  box-shadow: 0 1px 5px $grayColor;
+
+  &__wrap {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-auto-rows: minmax(90px, auto);
+    align-items: end;
+    justify-content: space-between;
+    gap: $gap;
+  }
+
+  @media screen and (max-width: $mobileWidth) {
+
+    &__wrap {
+      grid-template-columns: 1fr;
+      grid-auto-rows: minmax(10px, auto);
+      gap: 0;
+    }
+  }
+}
+
+.action-buttons {
+  padding: $gap 0;
+
+  &__add, &__refresh {
+    padding: 5px 10px;
+    color: $defaultColor;
+    background: $blueColor;
+    border-radius: 3px;
+    border: none;
+    outline: none;
+    text-shadow: 0 1px $darkColor;
+    box-shadow: 0 1px 5px $grayColor;
+    cursor: pointer;
+
+    &:hover {
+      opacity: .9;
+    }
+  }
+
+  button:not(:first-child) {
+    margin-left: 10px;
+  }
+
+  @media screen and (max-width: $mobileWidth) {
+    margin: auto;
+  }
+}
+
+.action-search {
+  justify-self: end;
+  padding: $gap 0;
+
+  &__find {
+    position: relative;
+    width: 20px;
+    margin: 0 auto;
+    padding: 5px 0;
+    text-align: center;
+    background: none;
+    border: none;
+    cursor: pointer;
+
+    &:hover {
+     opacity: .8;
+    }
+
+    &:focus {
+      outline: none;
+    }
+
+    &::before {
+      content: '';
+      display: block;
+      width: 9px;
+      height: 9px;
+      border: 2px solid $grayColor;
+      border-radius: 50%;
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      right: 4px;
+      bottom: 3px;
+      width: 3px;
+      transform: rotate(45deg);
+      border: 2px solid $grayColor;
+      border-top-right-radius: 2px;
+      border-bottom-right-radius: 2px;
+    }
+  }
+
+  &__field {
+    min-width: 250px;
+    padding: 5px;
+    border: none;
+    border-radius: 4px;
+    box-shadow: inset 0 1px 5px $grayColor;
+  }
+
+  @media screen and (max-width: $mobileWidth) {
+    margin: auto;
+  }
+}
