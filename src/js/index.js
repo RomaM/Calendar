@@ -52,10 +52,15 @@ calendar.init();
 const tooltipEl = document.querySelector('.tooltip');
 const headerBtnEls = document.querySelector('.action-buttons');
 const headerAddBtnEl = headerBtnEls.querySelector('.action-buttons__add');
+const headerRefreshBtnEl = headerBtnEls.querySelector('.action-buttons__refresh');
 
 headerAddBtnEl.addEventListener('click', (ev) => {
     tooltipEl.querySelector('.tooltip-fields__date').setAttribute('type', 'text');
     tooltip.showEv(null, '');
     let position = ev.target.getBoundingClientRect();
     tooltip.setPosition(position);
+});
+
+headerRefreshBtnEl.addEventListener('click', (ev) => {
+    document.location.reload(true);
 });
