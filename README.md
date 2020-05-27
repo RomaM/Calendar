@@ -2,7 +2,7 @@
 
 # Calendar
 The calendar application v1 (beta) with basic functionality using only vanilla JS.
-Link to the github example page - [calendar](https://romam.github.io/Calendar/index.html)
+Link to the github example page - [calendar](https://romam.github.io/Calendar)
 
 ## Install
 For deployment on local machine

@@ -17,7 +17,7 @@
     width: 0;
     height: 0;
     border: 10px solid transparent;
-    border-bottom-color: black;
+    border-bottom-color: $darkColor;
   }
 
   &:after {
@@ -29,7 +29,7 @@
     width: 0;
     height: 0;
     border: 9px solid transparent;
-    border-bottom-color: white;
+    border-bottom-color: $defaultColor;
   }
 
   &__right-bottom {
@@ -41,6 +41,22 @@
     &::after {
       left: auto;
       right: 41px;
+    }
+  }
+
+  &__top {
+    &::before {
+      bottom: auto;
+      top: 100%;
+      border-bottom-color: transparent;
+      border-top-color: $darkColor;
+    }
+
+    &::after {
+      bottom: auto;
+      top: 100%;
+      border-bottom-color: transparent;
+      border-top-color: $defaultColor;
     }
   }
 

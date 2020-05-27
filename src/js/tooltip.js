@@ -15,7 +15,17 @@ export default class Tooltip {
     /* Method: Set tooltip element position */
     setPosition(position) {
         const centerPos = document.documentElement.clientWidth / 2;
-        this.tooltipEl.style.top = `${position.bottom}px`;
+        const bottomPos = document.documentElement.clientHeight;
+        console.log(bottomPos);
+
+
+        if(position.bottom + this.tooltipEl.clientHeight > bottomPos) {
+            this.tooltipEl.style.top = `${position.top - this.tooltipEl.offsetHeight - 20}px`;
+            this.tooltipEl.classList.add('tooltip__top');
+        } else {
+            this.tooltipEl.style.top = `${position.bottom}px`;
+            this.tooltipEl.classList.remove('tooltip__top');
+        }
 
         if(centerPos > position.right && centerPos > 500) {
             this.tooltipEl.style.left = `${position.left}px`;
