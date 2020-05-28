@@ -21,6 +21,7 @@
     border: 1px solid $grayColor;
     border-radius: 3px;
     box-shadow: 0 0 1px $grayColor;
+    cursor: pointer;
 
     &:after {
       position: absolute;
@@ -36,6 +37,7 @@
 
   &__prev-btn {
     &::after {
+      left: 6px;
       border-right: 5px solid $darkColor;
     }
   }
@@ -57,6 +59,7 @@
     border: 1px solid $grayColor;
     border-radius: 3px;
     box-shadow: 0 0 1px $grayColor;
+    cursor: pointer;
   }
 }
 
@@ -81,9 +84,12 @@
   color: $grayColor;
   font-size: .9rem;
 
-  &:hover {
-    background: $primaryColor;
-    color: $darkColor;
+  &[data-date*='/'] {
+    cursor: pointer;
+    &:hover {
+      background: $primaryColor;
+      color: $darkColor;
+    }
   }
 
   &--mobile {

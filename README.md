@@ -1,7 +1,7 @@
 > This README is for Calendar v1
 
 # Calendar
-The calendar application v1 (beta) with basic functionality using only vanilla JS.
+Calendar v1 (beta) application with basic functionality for switching between months and storing events using LocalStorage developed using vanilla JS.
 Link to the github example page - [calendar](https://romam.github.io/Calendar)
 
 ## Install
@@ -21,7 +21,13 @@ To build for production
 npm run prod
 ```
 
-## Known issues and ToDo's
+After running on the local machine you can see a main application screen (`http://localhost:8080/`).
+To add an event you can use either main 'ADD' button with some [limitations](#known-issues-and-todos) or 
+an active calendar cell, after which you will see just created event. 
+To change an existing event click on the event or add an event with the same name.
+Months show in a locale lang. You can switch between months or go back to current month via 'TODAY' button.
+
+## Known issues and ToDos
 1. Calendar can add events only for selected months and only with specific values for 
 fields (without zero prefix and with '/' separator). Months started form zero (0).
 Using main 'ADD' button, keep that in mind;
